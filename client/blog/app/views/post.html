@@ -1,0 +1,18 @@
+<h2>Post</h2>
+<h3 ng-bind="post.title"></h3>
+<span>
+    create at : <time ng-bind="post.createAt | date:format"></time>
+</span>
+<br/>
+<span>
+    update at : <time ng-bind="post.draft.saveAt | date:format"></time>
+</span>
+<br/>
+<span>
+    author : <span ng-bind="post.author.username"></span>
+</span>
+<div>
+    <a ng-repeat="tag in post.tags" ng-href=""><span ng-bind="tag.name"></span></a>
+</div>
+
+<div ng-bind="post.draft.text"></div>
